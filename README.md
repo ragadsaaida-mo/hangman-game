@@ -29,8 +29,7 @@ The player must guess the word one letter at a time.
 - Display of used letters
 - Automatic game reset after timeout
 
-## How to Run the Game
-Simply open the `index.html` file in any modern web browser.
+
 
 ## Technologies Used
 - HTML
