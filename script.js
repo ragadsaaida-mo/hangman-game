@@ -1,7 +1,7 @@
 // ===== Hangman (Modern) =====
 // משחק Hangman ב-JavaScript
 
-// רשימת מילים (אפשר לשנות בקלות)
+// רשימת מילים 
 const words = ["apple", "house", "bread", "mouse", "paper", "train", "candy", "plant"];
 
 let secretWord = "";      // המילה הסודית
