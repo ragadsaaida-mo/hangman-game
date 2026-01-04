@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <h1>Hangman</h1>
+
+    <!-- game rules -->
+    <p class="rules">
+      Guess the secret word one letter at a time. You have 6 attempts.
+      You have 30 seconds for each move — if time runs out: <b>you lose</b> and a new game starts.
+    </p>
+
+    <div class="card">
+
+      <div class="top-row">
+        <div class="stat">
+          <span class="label">Attempts</span>
+          <span id="attempts" class="value">6</span>
+          <div id="hearts" class="hearts"></div>
+        </div>
+
+        <div class="stat">
+          <span class="label">Time</span>
+          <span id="time" class="value">30</span>
+        </div>
+      </div>
+
+      <!-- hangman drawing -->
+      <div class="hangman-wrap">
+        <svg viewBox="0 0 200 220" class="hangman">
+          <line x1="30" y1="200" x2="170" y2="200" class="gallow" />
+          <line x1="60" y1="200" x2="60" y2="20" class="gallow" />
+          <line x1="60" y1="20" x2="140" y2="20" class="gallow" />
+          <line x1="140" y1="20" x2="140" y2="45" class="gallow" />
+
+          <circle cx="140" cy="62" r="16" class="part" data-step="1" />
+          <line x1="140" y1="78" x2="140" y2="125" class="part" data-step="2" />
+          <line x1="140" y1="92" x2="118" y2="110" class="part" data-step="3" />
+          <line x1="140" y1="92" x2="162" y2="110" class="part" data-step="4" />
+          <line x1="140" y1="125" x2="122" y2="155" class="part" data-step="5" />
+          <line x1="140" y1="125" x2="158" y2="155" class="part" data-step="6" />
+        </svg>
+      </div>
+
+      <p id="word" class="word">_ _ _ _ _</p>
+
+      <div class="controls">
+        <input type="text" id="letter" maxlength="1" placeholder="Type a letter..." />
+        <button onclick="guessLetter()" class="btn primary">Guess</button>
+        <button onclick="newGame()" class="btn">New Game</button>
+      </div>
+
+      <p id="message" class="message"></p>
+
+      <div class="used">
+        <span class="label">Used letters:</span>
+        <span id="usedLetters" class="used-box">—</span>
+      </div>
+
+    </div>
+
+    <p class="footer">Built with HTML • CSS • JavaScript</p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
